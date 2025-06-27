@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Added viewport meta tag for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini Reconciliation Tool</title>
     <!-- Google Fonts - Inter for a modern look -->
@@ -13,15 +12,28 @@
       /* Custom styles for Tailwind configuration */
       /* These colors are for demonstration; you can customize Tailwind's theme in tailwind.config.js */
       :root {
-        --color-blue-50: #eff6ff;
-        --color-blue-700: #1d4ed8;
-        --color-gray-100: #f3f4f6;
-        --color-gray-500: #6b7280;
-        --color-gray-800: #1f2937;
-        --color-green-100: #d1fae5;
-        --color-green-800: #065f46;
-        --color-red-100: #fee2e2;
-        --color-red-800: #991b1b;
+        /* Define a new light emerald green for background */
+        --color-emerald-50: #ecfdf5; /* Very light green for background */
+        --color-emerald-600: #059669; /* Primary green for buttons */
+        --color-emerald-700: #047857; /* Darker green for headings */
+        
+        /* Existing colors refined */
+        --color-gray-100: #f3f4f6; /* Used for subtle accents, less dominant */
+        --color-gray-50: #f9fafb; /* Lightest gray for table headers */
+        --color-gray-200: #e5e7eb; /* Light gray for borders */
+        --color-gray-500: #6b7280; /* Medium gray for secondary text */
+        --color-gray-600: #4b5563; /* Darker gray for general text */
+        --color-gray-700: #374151; /* Dark gray for labels/strong text */
+        --color-gray-800: #1f2937; /* Darkest gray for main text, "touch of black" */
+        --color-gray-900: #111827; /* Near black */
+
+        /* Existing semantic colors */
+        --color-green-600: #22c55e; /* For match/success */
+        --color-green-700: #15803d; /* Darker green hover */
+        --color-yellow-600: #eab308; /* For warning/only internal */
+        --color-yellow-700: #a16207; /* Darker yellow hover */
+        --color-red-600: #ef4444; /* For mismatch/only provider */
+        --color-red-700: #dc2626; /* Darker red hover */
       }
       /* Ensure body takes full height and uses Inter font */
       body {
@@ -31,7 +43,8 @@
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        background-color: var(--color-gray-100); /* Consistent background */
+        /* Updated background to a soft green */
+        background-color: var(--color-emerald-50); 
       }
       /* Set file input button cursor to pointer */
       input[type="file"]::-webkit-file-upload-button {
@@ -50,8 +63,33 @@
               inter: ['Inter', 'sans-serif'],
             },
             colors: {
-              // Custom color palette if needed
-              // Example: 'primary': '#YOUR_PRIMARY_COLOR'
+              // Custom color palette matching the CSS variables
+              emerald: {
+                50: '#ecfdf5',
+                600: '#059669',
+                700: '#047857',
+              },
+              gray: {
+                50: '#f9fafb',
+                200: '#e5e7eb',
+                500: '#6b7280',
+                600: '#4b5563',
+                700: '#374151',
+                800: '#1f2937',
+                900: '#111827',
+              },
+              green: {
+                600: '#22c55e',
+                700: '#15803d',
+              },
+              yellow: {
+                600: '#eab308',
+                700: '#a16207',
+              },
+              red: {
+                600: '#ef4444',
+                700: '#dc2626',
+              }
             }
           }
         }

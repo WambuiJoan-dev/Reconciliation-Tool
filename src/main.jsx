@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 // No longer importing global CSS files as styling is handled by Tailwind
-// import './index.css'
+// import './index.css' // Removed
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
