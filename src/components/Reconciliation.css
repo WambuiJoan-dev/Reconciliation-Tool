@@ -1,13 +1,16 @@
+/* Make sure the outer container takes full height */
 .reconciliation-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;  /* vertical center */
+  align-items: center;      /* horizontal center */
+  min-height: 100vh;        /* full viewport height */
   padding: 2rem;
   font-family: sans-serif;
+  text-align: center;
 }
 
 h1 {
-  text-align: center;
   margin-bottom: 2rem;
 }
 
@@ -15,6 +18,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
   margin-bottom: 2rem;
 }
@@ -41,6 +45,7 @@ h1 {
 .results-section {
   width: 100%;
   max-width: 900px;
+  margin-top: 2rem;
 }
 
 .results-section h2 {
@@ -70,7 +75,6 @@ table {
 th, td {
   border: 1px solid #ccc;
   padding: 0.5rem;
-  text-align: left;
 }
 
 th {

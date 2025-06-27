@@ -2,12 +2,67 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- Added viewport meta tag for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <title>Mini Reconciliation Tool</title>
+    <!-- Google Fonts - Inter for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN for quick styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom styles for Tailwind configuration */
+      /* These colors are for demonstration; you can customize Tailwind's theme in tailwind.config.js */
+      :root {
+        --color-blue-50: #eff6ff;
+        --color-blue-700: #1d4ed8;
+        --color-gray-100: #f3f4f6;
+        --color-gray-500: #6b7280;
+        --color-gray-800: #1f2937;
+        --color-green-100: #d1fae5;
+        --color-green-800: #065f46;
+        --color-red-100: #fee2e2;
+        --color-red-800: #991b1b;
+      }
+      /* Ensure body takes full height and uses Inter font */
+      body {
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: var(--color-gray-100); /* Consistent background */
+      }
+      /* Set file input button cursor to pointer */
+      input[type="file"]::-webkit-file-upload-button {
+          cursor: pointer;
+      }
+      input[type="file"]::file-selector-button {
+          cursor: pointer;
+      }
+    </style>
+    <script>
+      // Configure Tailwind CSS to use Inter font as default
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              // Custom color palette if needed
+              // Example: 'primary': '#YOUR_PRIMARY_COLOR'
+            }
+          }
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <!-- Script for your React application -->
     <script type="module" src="/src/main.jsx"></script>
+    <!-- PapaParse CDN for CSV parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
   </body>
 </html>

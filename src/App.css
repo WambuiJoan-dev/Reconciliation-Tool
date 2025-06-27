@@ -19,7 +19,16 @@
 }
 
 @keyframes logo-spin {
-  from {
+  from {.reconciliation-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* vertical center */
+  align-items: center;      /* horizontal center */
+  min-height: 100vh;        /* full viewport height */
+  padding: 2rem;
+  font-family: sans-serif;
+  text-align: center;
+}
     transform: rotate(0deg);
   }
   to {
